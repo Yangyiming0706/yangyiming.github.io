@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>升级版3D汉诺塔</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-box">
+        <h1>3D 汉诺塔 | 升级版</h1>
+        <div class="control-bar">
+            <label>圆盘数量(3-8)：</label>
+            <input type="number" id="diskCount" min="3" max="8" value="3">
+
+            <label>演示速度：</label>
+            <select id="speedSelect">
+                <option value="1200">慢速</option>
+                <option value="800" selected>中速</option>
+                <option value="400">快速</option>
+            </select>
+
+            <span class="step-text">移动步数：<span id="stepNum">0</span></span>
+            <button id="resetBtn">重置游戏</button>
+            <button id="autoBtn">自动解题</button>
+        </div>
+        <div class="status-tip" id="statusTip">请点击柱子选择圆盘</div>
+    </div>
+
+    <!-- 3D主容器 -->
+    <div class="game-3d-wrap">
+        <div class="peg" data-idx="0"></div>
+        <div class="peg" data-idx="1"></div>
+        <div class="peg" data-idx="2"></div>
+    </div>
+
+    <!-- 提示层 -->
+    <div class="warn-tip" id="warnTip"></div>
+    <div class="win-tip" id="winTip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
